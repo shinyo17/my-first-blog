@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>내 블로그</title>
+    </head>
+    <body>
+    	<div>
+    		<h1><a href="">Our dawn is hotter than day</a></h1>
+    		<h3>seventeen</h3>
+    	</div>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+    </body>
+</html>
